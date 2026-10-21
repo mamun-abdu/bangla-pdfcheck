@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bangla-pdfcheck"
+version = "0.1.0"
+description = "A lightweight offline checker for Bengali PDF text-layer extraction warning signs"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Md. Abdullah Al Mamun" }]
+keywords = ["bengali", "bangla", "pdf", "unicode", "text-extraction", "cli", "accessibility"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Education",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Text Processing",
+]
+dependencies = ["pypdf>=5.0,<7"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.9", "reportlab>=4.0"]
+
+[project.scripts]
+bangla-pdfcheck = "bangla_pdfcheck.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/mamun-abdu/bangla-pdfcheck"
+Repository = "https://github.com/mamun-abdu/bangla-pdfcheck"
+Issues = "https://github.com/mamun-abdu/bangla-pdfcheck/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F"]

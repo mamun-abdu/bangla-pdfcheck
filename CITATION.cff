@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use BanglaPDFCheck in research or a workflow, please cite the repository."
+title: "BanglaPDFCheck"
+authors:
+  - family-names: Mamun
+    given-names: "Md. Abdullah Al"
+version: 0.1.0
+date-released: 2026-10-21
+license: MIT
+repository-code: "https://github.com/mamun-abdu/bangla-pdfcheck"
